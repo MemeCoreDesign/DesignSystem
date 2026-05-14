@@ -1,0 +1,142 @@
+/* ==========================================================
+   MemeCore — Footer
+   Source: Figma [Main Site] Design System - V3 > Footer
+   bg: #121213 (dark)
+   ========================================================== */
+
+.site-footer {
+  background: #121213;
+  color: #dadae0;
+  padding: 60px 0 32px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --------------------------------------------------------
+   Sitemap grid
+-------------------------------------------------------- */
+.footer-sitemap {
+  display: grid;
+  grid-template-columns: 204px 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-logo { display: flex; align-items: flex-start; }
+.footer-logo img,
+.footer-logo svg { height: 32px; width: auto; }
+
+.footer-nav-groups {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.footer-nav-group h4 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-label-footer-md);
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.footer-nav-group ul {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Footer link button */
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-label-footer-md);
+  line-height: 16px;
+  color: #dadae0;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-link:hover { color: #ffffff; }
+.footer-link.disabled { color: #5e5e65; pointer-events: none; }
+
+.footer-link-sm {
+  font-size: var(--text-label-footer-sm);
+  line-height: 14px;
+}
+.footer-link-lg {
+  font-size: var(--text-label-footer-lg);
+  line-height: 18px;
+}
+
+/* Outlink icon */
+.footer-link .outlink-icon {
+  width: 13px; height: 13px;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------------
+   Footer bottom bar
+-------------------------------------------------------- */
+.footer-bottom {
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-community {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: #1c1c21;
+  color: #dadae0;
+  text-decoration: none;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+.footer-social-icon:hover { background: #2e2e38; }
+.footer-social-icon svg { width: 18px; height: 18px; }
+
+.footer-copyright {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-label-footer-sm);
+  color: #5e5e65;
+}
+
+/* --------------------------------------------------------
+   Responsive
+-------------------------------------------------------- */
+@media (max-width: 1279px) {
+  .footer-nav-groups { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 767px) {
+  .footer-sitemap {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footer-nav-groups { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}

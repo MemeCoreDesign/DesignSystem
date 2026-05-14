@@ -1,0 +1,66 @@
+/* ==========================================================
+   MemeCore — Chips
+   Source: Figma [Main Site] Design System - V3 > Chips
+   ========================================================== */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 4px 4px 8px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-label-tag);    /* 12px */
+  line-height: var(--lh-label-tag);
+  letter-spacing: var(--ls-label-tag);
+  border: 1.5px solid transparent;
+  cursor: default;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* Close icon button inside chip */
+.chip-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  flex-shrink: 0;
+  opacity: 0.8;
+  transition: opacity 0.15s;
+}
+.chip-close:hover { opacity: 1; }
+.chip-close svg { display: block; }
+
+/* --------------------------------------------------------
+   Color variants — light mode (dark text on soft bg)
+-------------------------------------------------------- */
+.chip-red    { background: #feecec; color: #e52222; border-color: #feecec; }
+.chip-orange { background: #fae4de; color: #a44d3a; border-color: #fae4de; }
+.chip-yellow { background: #fffbce; color: #b07f00; border-color: #fffbce; }
+.chip-green  { background: #e1f6e3; color: #1f7236; border-color: #e1f6e3; }
+.chip-seagreen { background: #dcf3f3; color: #257676; border-color: #dcf3f3; }
+.chip-blue   { background: #e1efff; color: #0f06aa; border-color: #e1efff; }
+.chip-purple { background: #f1ecfc; color: #7443df; border-color: #f1ecfc; }
+.chip-gray   { background: #dadae0; color: #5e5e65; border-color: #dadae0; }
+.chip-black  { background: #121213; color: #e7e7eb; border-color: #1c1c21; }
+
+/* --------------------------------------------------------
+   Color variants — dark mode (light text, visible border)
+-------------------------------------------------------- */
+.chip-dark.chip-red    { background: #feecec; color: #fed5d5; border-color: #ff8c8c; }
+.chip-dark.chip-orange { background: #fae4de; color: #f9c4b8; border-color: #f3b19f; }
+.chip-dark.chip-yellow { background: #fffbce; color: #fff79c; border-color: #fff79c; }
+.chip-dark.chip-green  { background: #e1f6e3; color: #b6ebc5; border-color: #a8e4ae; }
+.chip-dark.chip-seagreen { background: #dcf3f3; color: #8fdcdc; border-color: #7bcfcf; }
+.chip-dark.chip-blue   { background: #e1efff; color: #b5ceff; border-color: #81a5ff; }
+.chip-dark.chip-purple { background: #f1ecfc; color: #c7b4f2; border-color: #c7b4f2; }
+.chip-dark.chip-gray   { background: #ffffff; color: #c2c2cc; border-color: #ffffff; }
+.chip-dark.chip-black  { background: #121213; color: #e7e7eb; border-color: #ffffff; }

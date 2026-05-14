@@ -1,0 +1,171 @@
+/* ==========================================================
+   MemeCore Design System — Typography Classes
+   Source: Figma [Main Site] Design System - V3
+   Requires: tokens.css
+   ========================================================== */
+
+/* --------------------------------------------------------
+   title/bold — Marvin (display headings)
+-------------------------------------------------------- */
+.title-bold-xxxl {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-title-bold-xxxl);
+  line-height: var(--lh-title-bold-xxxl);
+  letter-spacing: var(--ls-none);
+}
+.title-bold-xxl {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-title-bold-xxl);
+  line-height: var(--lh-title-bold-xxl);
+  letter-spacing: var(--ls-none);
+}
+.title-bold-xl {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-title-bold-xl);
+  line-height: var(--lh-title-bold-xl);
+  letter-spacing: var(--ls-none);
+}
+.title-bold-m {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-title-bold-m);
+  line-height: var(--lh-title-bold-m);
+  letter-spacing: var(--ls-none);
+}
+.title-bold-s {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-title-bold-s);
+  line-height: var(--lh-title-bold-s);
+  letter-spacing: var(--ls-none);
+}
+.title-bold-lg {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-title-bold-lg);
+  line-height: var(--lh-title-bold-lg);
+  letter-spacing: var(--ls-none);
+}
+.title-bold-xs {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-title-bold-xs);
+  line-height: var(--lh-title-bold-xs);
+  letter-spacing: var(--ls-none);
+}
+
+/* --------------------------------------------------------
+   title — IBM Plex Sans 600 (section headings)
+-------------------------------------------------------- */
+.title-xxl {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-title-xxl);
+  line-height: var(--lh-title-xxl);
+  letter-spacing: var(--ls-none);
+}
+.title-xl {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-title-xl);
+  line-height: var(--lh-title-xl);
+  letter-spacing: var(--ls-none);
+}
+.title-lg {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-title-lg);
+  line-height: var(--lh-title-lg);
+  letter-spacing: var(--ls-none);
+}
+.title-md {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-title-md);
+  line-height: var(--lh-title-md);
+  letter-spacing: var(--ls-none);
+}
+.title-sm {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-title-sm);
+  line-height: var(--lh-title-sm);
+  letter-spacing: var(--ls-none);
+}
+.title-xs {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-title-xs);
+  line-height: var(--lh-title-xs);
+  letter-spacing: var(--ls-none);
+}
+
+/* --------------------------------------------------------
+   body/regular — IBM Plex Sans 400
+-------------------------------------------------------- */
+.body-xxxl { font-family: var(--font-body); font-weight: 400; font-size: var(--text-body-xxxl); line-height: var(--lh-body-xxxl); letter-spacing: var(--ls-none); }
+.body-xxl  { font-family: var(--font-body); font-weight: 400; font-size: var(--text-body-xxl);  line-height: var(--lh-body-xxl);  letter-spacing: var(--ls-none); }
+.body-xl   { font-family: var(--font-body); font-weight: 400; font-size: var(--text-body-xl);   line-height: var(--lh-body-xl);   letter-spacing: var(--ls-none); }
+.body-lg   { font-family: var(--font-body); font-weight: 400; font-size: var(--text-body-lg);   line-height: var(--lh-body-lg);   letter-spacing: var(--ls-none); }
+.body-md   { font-family: var(--font-body); font-weight: 400; font-size: var(--text-body-md);   line-height: var(--lh-body-md);   letter-spacing: var(--ls-none); }
+.body-sm   { font-family: var(--font-body); font-weight: 400; font-size: var(--text-body-sm);   line-height: var(--lh-body-sm);   letter-spacing: var(--ls-none); }
+.body-xs   { font-family: var(--font-body); font-weight: 400; font-size: var(--text-body-xs);   line-height: var(--lh-body-xs);   letter-spacing: var(--ls-body-xs); }
+.body-xxs  { font-family: var(--font-body); font-weight: 400; font-size: var(--text-body-xxs);  line-height: var(--lh-body-xxs);  letter-spacing: var(--ls-body-xxs); }
+
+/* --------------------------------------------------------
+   body/medium — IBM Plex Sans 500
+-------------------------------------------------------- */
+.body-medium-xxl  { font-family: var(--font-body); font-weight: 500; font-size: var(--text-medium-xxl);  line-height: 36px;   letter-spacing: var(--ls-none); }
+.body-medium-xl   { font-family: var(--font-body); font-weight: 500; font-size: var(--text-medium-xl);   line-height: 30px;   letter-spacing: var(--ls-none); }
+.body-medium-lg   { font-family: var(--font-body); font-weight: 500; font-size: var(--text-medium-lg);   line-height: 27px;   letter-spacing: var(--ls-none); }
+.body-medium-md   { font-family: var(--font-body); font-weight: 500; font-size: var(--text-medium-md);   line-height: 24px;   letter-spacing: var(--ls-none); }
+.body-medium-sm   { font-family: var(--font-body); font-weight: 500; font-size: var(--text-medium-sm);   line-height: 22.5px; letter-spacing: var(--ls-none); }
+.body-medium-xs   { font-family: var(--font-body); font-weight: 500; font-size: var(--text-medium-xs);   line-height: 21px;   letter-spacing: var(--ls-none); }
+.body-medium-xxxs { font-family: var(--font-body); font-weight: 500; font-size: var(--text-medium-xxxs); line-height: 19.5px; letter-spacing: var(--ls-none); }
+
+/* --------------------------------------------------------
+   label — Marvin buttons / IBM Plex Sans footer & tag
+-------------------------------------------------------- */
+.label-btn-lg {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-label-btn-lg);
+  line-height: var(--lh-label-btn-lg);
+  letter-spacing: var(--ls-label-btn-lg);
+}
+.label-btn-md {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-label-btn-md);
+  line-height: var(--lh-label-btn-md);
+  letter-spacing: var(--ls-label-btn-md);
+}
+.label-btn-sm {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-label-btn-sm);
+  line-height: var(--lh-label-btn-sm);
+  letter-spacing: var(--ls-label-btn-sm);
+}
+.label-footer-lg { font-family: var(--font-body); font-weight: 400; font-size: var(--text-label-footer-lg); line-height: 18px; letter-spacing: var(--ls-none); }
+.label-footer-md { font-family: var(--font-body); font-weight: 400; font-size: var(--text-label-footer-md); line-height: 16px; letter-spacing: var(--ls-none); }
+.label-footer-sm { font-family: var(--font-body); font-weight: 400; font-size: var(--text-label-footer-sm); line-height: 14px; letter-spacing: var(--ls-none); }
+.label-segment-md { font-family: var(--font-body); font-weight: 500; font-size: var(--text-label-segment-md); line-height: 24px; letter-spacing: var(--ls-none); }
+.label-segment-sm { font-family: var(--font-body); font-weight: 500; font-size: var(--text-label-segment-sm); line-height: 21px; letter-spacing: var(--ls-none); }
+.label-tag {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-label-tag);
+  line-height: var(--lh-label-tag);
+  letter-spacing: var(--ls-label-tag);
+}
+.text-sub-message {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-sub-message);
+  line-height: var(--lh-sub-message);
+  letter-spacing: var(--ls-sub-message);
+}

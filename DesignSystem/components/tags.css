@@ -1,0 +1,55 @@
+/* ==========================================================
+   MemeCore — Tags
+   Source: Figma [Main Site] Design System - V3 > Tag
+   ========================================================== */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px 4px 8px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-label-tag);    /* 12px */
+  line-height: var(--lh-label-tag);
+  letter-spacing: var(--ls-label-tag);
+  white-space: nowrap;
+  user-select: none;
+  border: 1.5px solid transparent;
+}
+
+/* Color variants */
+.tag-red      { background: #feecec; color: #e52222; border-color: #feecec; }
+.tag-orange   { background: #fae4de; color: #a44d3a; border-color: #fae4de; }
+.tag-yellow   { background: #fffbce; color: #b07f00; border-color: #fffbce; }
+.tag-green    { background: #e1f6e3; color: #1f7236; border-color: #e1f6e3; }
+.tag-seagreen { background: #dcf3f3; color: #257676; border-color: #dcf3f3; }
+.tag-blue     { background: #e1efff; color: #0f06aa; border-color: #e1efff; }
+.tag-purple   { background: #f1ecfc; color: #7443df; border-color: #f1ecfc; }
+.tag-gray     { background: #dadae0; color: #5e5e65; border-color: #dadae0; }
+.tag-black    { background: #121213; color: #e7e7eb; border-color: #1c1c21; }
+.tag-ended    { background: #c2c2cc; color: #e7e7eb; border-color: #c2c2cc; }
+
+/* Special status tags */
+.tag-live {
+  background: #e1f6e3;
+  color: #1f7236;
+  border-color: #e1f6e3;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.tag-live::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #1f7236;
+  flex-shrink: 0;
+}
+
+.tag-coming-soon {
+  background: #fffbce;
+  color: #b07f00;
+  border-color: #fffbce;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MemeCore — Inputs</title>
+  <link rel="stylesheet" href="../tokens.css" />
+  <link rel="stylesheet" href="inputs.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg-night); color: var(--color-white); font-family: var(--font-body); padding: 48px 40px; }
+    h2 { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-light); margin: 40px 0 20px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    h2:first-of-type { margin-top: 0; }
+    .row { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-bottom: 16px; }
+    .col { display: flex; flex-direction: column; gap: 4px; min-width: 240px; }
+    .col-label { font-size: 11px; color: rgba(255,255,255,0.35); margin-bottom: 4px; }
+    .dark-bg { background: var(--color-bg-grants); padding: 24px; border-radius: 4px; }
+    .search-icon { width: 20px; height: 20px; }
+  </style>
+</head>
+<body>
+
+  <h2>Text Fields — Light</h2>
+  <div class="row">
+    <div class="col">
+      <div class="col-label">sm / enabled</div>
+      <div class="input-field input-sm">
+        <div class="input-wrap">
+          <span class="input-icon"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></span>
+          <input type="text" placeholder="Search..." />
+        </div>
+        <span class="input-sub">Helper text</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="col-label">md / enabled</div>
+      <div class="input-field input-md">
+        <div class="input-wrap">
+          <input type="text" placeholder="Enter value..." />
+        </div>
+        <span class="input-sub">Common sub-text description</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="col-label">md / error</div>
+      <div class="input-field input-md error">
+        <div class="input-wrap">
+          <input type="text" value="Invalid input" />
+        </div>
+        <span class="input-sub">This field is required</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="col-label">md / disabled</div>
+      <div class="input-field input-md disabled">
+        <div class="input-wrap">
+          <input type="text" placeholder="Disabled..." disabled />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Text Fields — Dark</h2>
+  <div class="dark-bg">
+    <div class="row">
+      <div class="col">
+        <div class="col-label" style="color:rgba(255,255,255,.35)">sm / enabled</div>
+        <div class="input-field input-sm input-dark">
+          <div class="input-wrap">
+            <span class="input-icon"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></span>
+            <input type="text" placeholder="Search..." />
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="col-label" style="color:rgba(255,255,255,.35)">md / enabled</div>
+        <div class="input-field input-md input-dark">
+          <div class="input-wrap">
+            <input type="text" placeholder="Enter value..." />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Segment Control</h2>
+  <div class="row">
+    <div class="segment">
+      <button class="segment-item active">All</button>
+      <button class="segment-item">DeFi</button>
+      <button class="segment-item">NFT</button>
+      <button class="segment-item">Gaming</button>
+    </div>
+  </div>
+
+  <h2>Selection Controls</h2>
+  <div class="row">
+    <div class="col">
+      <div class="col-label">Checkbox</div>
+      <label class="checkbox-wrap"><input class="checkbox-input" type="checkbox" checked /><span class="checkbox-label" style="color:white">Checked</span></label>
+      <label class="checkbox-wrap"><input class="checkbox-input" type="checkbox" /><span class="checkbox-label" style="color:white">Unchecked</span></label>
+      <label class="checkbox-wrap"><input class="checkbox-input" type="checkbox" disabled /><span class="checkbox-label" style="color:rgba(255,255,255,.4)">Disabled</span></label>
+    </div>
+    <div class="col">
+      <div class="col-label">Radio</div>
+      <label class="radio-wrap"><input class="radio-input" type="radio" name="demo" checked /><span class="radio-label" style="color:white">Selected</span></label>
+      <label class="radio-wrap"><input class="radio-input" type="radio" name="demo" /><span class="radio-label" style="color:white">Unselected</span></label>
+      <label class="radio-wrap"><input class="radio-input" type="radio" disabled /><span class="radio-label" style="color:rgba(255,255,255,.4)">Disabled</span></label>
+    </div>
+    <div class="col">
+      <div class="col-label">Switch</div>
+      <label class="switch-wrap"><input class="switch-input" type="checkbox" checked /><span style="color:white;font-size:14px">On</span></label>
+      <label class="switch-wrap"><input class="switch-input" type="checkbox" /><span style="color:white;font-size:14px">Off</span></label>
+      <label class="switch-wrap"><input class="switch-input" type="checkbox" disabled /><span style="color:rgba(255,255,255,.4);font-size:14px">Disabled</span></label>
+    </div>
+  </div>
+
+</body>
+</html>

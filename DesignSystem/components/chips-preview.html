@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MemeCore — Chips &amp; Tags</title>
+  <link rel="stylesheet" href="../tokens.css" />
+  <link rel="stylesheet" href="chips.css" />
+  <link rel="stylesheet" href="tags.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg-night); color: var(--color-white); font-family: var(--font-body); padding: 48px 40px; }
+    h2 { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-light); margin: 40px 0 20px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    h2:first-of-type { margin-top: 0; }
+    .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 8px; }
+    .dark-bg { background: var(--color-bg-grants); padding: 20px; border-radius: 4px; }
+    .close-svg { pointer-events: none; }
+  </style>
+</head>
+<body>
+
+  <h2>Tags</h2>
+  <div class="row">
+    <span class="tag tag-red">Live</span>
+    <span class="tag tag-orange">Beta</span>
+    <span class="tag tag-yellow">Coming Soon</span>
+    <span class="tag tag-green">Active</span>
+    <span class="tag tag-seagreen">New</span>
+    <span class="tag tag-blue">DeFi</span>
+    <span class="tag tag-purple">Featured</span>
+    <span class="tag tag-gray">Archive</span>
+    <span class="tag tag-black">Premium</span>
+    <span class="tag tag-ended">Ended</span>
+  </div>
+  <div class="row">
+    <span class="tag tag-live">Live</span>
+    <span class="tag tag-coming-soon">Coming Soon</span>
+  </div>
+
+  <h2>Chips — Light Mode</h2>
+  <div class="row">
+    <span class="chip chip-red">Red <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#b00c0c" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+    <span class="chip chip-orange">Orange <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#9f4614" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+    <span class="chip chip-yellow">Yellow <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#7b4b07" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+    <span class="chip chip-green">Green <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#006110" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+    <span class="chip chip-seagreen">Seagreen <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#257676" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+    <span class="chip chip-blue">Blue <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#0f06aa" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+    <span class="chip chip-purple">Purple <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#7443df" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+    <span class="chip chip-gray">Gray <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#5e5e65" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+    <span class="chip chip-black">Black <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#e7e7eb" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+  </div>
+
+  <h2>Chips — Dark Mode</h2>
+  <div class="dark-bg">
+    <div class="row">
+      <span class="chip chip-dark chip-red">Red <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#ffb5b5" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+      <span class="chip chip-dark chip-orange">Orange <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#eb9785" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+      <span class="chip chip-dark chip-yellow">Yellow <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#d2c96a" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+      <span class="chip chip-dark chip-green">Green <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#76bd8a" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+      <span class="chip chip-dark chip-seagreen">Seagreen <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#7bcfcf" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+      <span class="chip chip-dark chip-blue">Blue <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#81a5ff" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+      <span class="chip chip-dark chip-purple">Purple <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#c7b4f2" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+      <span class="chip chip-dark chip-gray">Gray <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#c2c2cc" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+      <span class="chip chip-dark chip-black">Black <button class="chip-close"><svg class="close-svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/></svg></button></span>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+/* ==========================================================
+   MemeCore Design System — CSS Tokens
+   Source: Figma [Main Site] Design System - V3
+   Generated: 2026-05-14
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+:root {
+
+  /* --------------------------------------------------------
+     TYPOGRAPHY — Font Families
+  -------------------------------------------------------- */
+  --font-display: 'Marvin', sans-serif;   /* title/bold-* */
+  --font-body:    'IBM Plex Sans', sans-serif; /* body, title, label */
+
+  /* --------------------------------------------------------
+     TYPOGRAPHY — Font Sizes
+  -------------------------------------------------------- */
+  /* title/bold (Marvin) */
+  --text-title-bold-xxxl: 54px;
+  --text-title-bold-xxl:  48px;
+  --text-title-bold-xl:   40px;
+  --text-title-bold-m:    32px;
+  --text-title-bold-s:    24px;
+  --text-title-bold-lg:   20px;
+  --text-title-bold-xs:   20px;
+
+  /* title (IBM Plex Sans 600) */
+  --text-title-xxxl: 20px;
+  --text-title-xxl:  28px;
+  --text-title-xl:   24px;
+  --text-title-lg:   20px;
+  --text-title-md:   18px;
+  --text-title-sm:   16px;
+  --text-title-xs:   14px;
+
+  /* body/regular (IBM Plex Sans 400) */
+  --text-body-xxxl: 28px;
+  --text-body-xxl:  24px;
+  --text-body-xl:   20px;
+  --text-body-lg:   18px;
+  --text-body-md:   16px;
+  --text-body-sm:   14px;
+  --text-body-xs:   13px;
+  --text-body-xxs:  12px;
+
+  /* body/medium (IBM Plex Sans 500) */
+  --text-medium-xxl:  24px;
+  --text-medium-xl:   20px;
+  --text-medium-lg:   18px;
+  --text-medium-md:   16px;
+  --text-medium-sm:   15px;
+  --text-medium-xs:   14px;
+  --text-medium-xxxs: 13px;
+
+  /* label */
+  --text-label-btn-lg: 16px;
+  --text-label-btn-md: 14px;
+  --text-label-btn-sm: 13px;
+  --text-label-footer-lg: 18px;
+  --text-label-footer-md: 16px;
+  --text-label-footer-sm: 14px;
+  --text-label-segment-md: 16px;
+  --text-label-segment-sm: 14px;
+  --text-label-tag: 12px;
+  --text-sub-message: 12px;
+
+  /* --------------------------------------------------------
+     TYPOGRAPHY — Line Heights
+  -------------------------------------------------------- */
+  --lh-title-bold-xxxl: 67px;
+  --lh-title-bold-xxl:  58px;
+  --lh-title-bold-xl:   48px;
+  --lh-title-bold-m:    38.4px;
+  --lh-title-bold-s:    28.8px;
+  --lh-title-bold-lg:   24px;
+  --lh-title-bold-xs:   24px;
+
+  --lh-title-xxl:  42px;
+  --lh-title-xl:   36px;
+  --lh-title-lg:   30px;
+  --lh-title-md:   27px;
+  --lh-title-sm:   24px;
+  --lh-title-xs:   21px;
+
+  --lh-body-xxxl: 42px;
+  --lh-body-xxl:  36px;
+  --lh-body-xl:   30px;
+  --lh-body-lg:   27px;
+  --lh-body-md:   24px;
+  --lh-body-sm:   21px;
+  --lh-body-xs:   19.5px;
+  --lh-body-xxs:  18px;
+
+  --lh-label-btn-lg: 16px;
+  --lh-label-btn-md: 14px;
+  --lh-label-btn-sm: 13px;
+  --lh-label-tag: 15.6px;
+  --lh-sub-message: 14.4px;
+
+  /* --------------------------------------------------------
+     TYPOGRAPHY — Letter Spacing
+  -------------------------------------------------------- */
+  --ls-label-btn-lg: 0.24px;
+  --ls-label-btn-md: 0.21px;
+  --ls-label-btn-sm: 0.195px;
+  --ls-body-xs:  0.13px;
+  --ls-body-xxs: 0.12px;
+  --ls-label-tag: 0.12px;
+  --ls-sub-message: 0.12px;
+  --ls-none: 0;
+
+  /* --------------------------------------------------------
+     COLORS — Brand Primary (Purple)
+  -------------------------------------------------------- */
+  --color-primary:       #7443df;
+  --color-primary-dark:  #2e1b59;
+  --color-primary-light: #9069e5;
+
+  /* --------------------------------------------------------
+     COLORS — Backgrounds
+  -------------------------------------------------------- */
+  --color-bg-night:        #172c4a;
+  --color-bg-night-dark:   #182133;
+  --color-bg-night-mid:    #202f4e;
+  --color-bg-sky:          #60abff;
+  --color-bg-menu:         #76a7ff;
+  --color-bg-grants:       #0c041e;
+  --color-bg-thunder-dark: #211f1e;
+  --color-bg-thunder-teal: #0c2930;
+  --color-bg-loading-dark: #170d2d;
+  --color-bg-loading-purple: #ac8eec;
+
+  /* --------------------------------------------------------
+     COLORS — Semantic / Accent
+  -------------------------------------------------------- */
+  --color-accent-green:  #19ff9b;
+  --color-accent-white:  #dffffa;
+  --color-white:         #ffffff;
+  --color-black:         #121213;
+
+  /* --------------------------------------------------------
+     SHADOWS
+  -------------------------------------------------------- */
+  --shadow-btn-primary:    0 4px 0 0 #2e1b59;
+  --shadow-btn-secondary:  0 4px 0 0 #c7b4f2;
+  --shadow-btn-tertiary:   0 4px 0 0 #e7e7eb;
+  --shadow-btn-line-light: 0 4px 0 0 rgba(18,18,19,0.50);
+  --shadow-btn-line-dark:  0 4px 0 0 #f3f3f5;
+  --shadow-btn-disabled:   0 4px 0 0 #808088;
+  --shadow-dropdown:       0 4px 10px 0 rgba(18,18,19,0.20);
+  --shadow-ticket:         0 8px 20px 0 rgba(0,0,0,0.25);
+  --shadow-sticker:        0 4px 0 0 rgba(18,18,19,0.30), -2px -2px 0 0 #fff, 2px 2px 0 0 #fff;
+  --shadow-switch-thumb:   -1px 1px 2px 0 rgba(18,18,19,0.08);
+  --shadow-ecosystem-glow: 0 0 200px 0 rgba(25,255,155,0.60);
+  --shadow-ecosystem-glow2: 0 0 200px 0 rgba(223,255,250,0.60);
+
+}

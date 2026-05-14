@@ -1,0 +1,244 @@
+/* ==========================================================
+   MemeCore — Inputs
+   Source: Figma [Main Site] Design System - V3 > Inputs
+   ========================================================== */
+
+/* --------------------------------------------------------
+   Text Field
+-------------------------------------------------------- */
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid #dadae0;
+  background: #f9f9fa;
+  transition: border-color 0.15s;
+}
+
+/* Sizes */
+.input-sm .input-wrap { padding: 8px 10px; min-height: 40px; }
+.input-md .input-wrap { padding: 10px 10px; min-height: 44px; }
+
+.input-wrap input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  line-height: var(--lh-body-sm);
+  color: #121213;
+  min-width: 0;
+}
+
+.input-wrap input::placeholder { color: #a1a1aa; }
+
+/* Icon slots */
+.input-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: #3d3d43;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* States */
+.input-wrap:hover               { border-color: #9069e5; }
+.input-field:focus-within .input-wrap { border-color: #7443df; box-shadow: 0 0 0 3px rgba(116,67,223,0.15); }
+
+.input-field.error .input-wrap  { border-color: #e52222; }
+.input-field.error .input-wrap:hover { border-color: #e52222; }
+.input-field:focus-within.error .input-wrap { border-color: #e52222; box-shadow: 0 0 0 3px rgba(229,34,34,0.15); }
+
+.input-field.success .input-wrap { border-color: #1f7236; }
+.input-field.disabled .input-wrap { opacity: 0.5; pointer-events: none; }
+
+/* Sub-text */
+.input-sub {
+  font-family: var(--font-body);
+  font-size: var(--text-sub-message);
+  line-height: var(--lh-sub-message);
+  letter-spacing: var(--ls-sub-message);
+  color: #5e5e65;
+  padding: 0 1px;
+}
+.input-field.error   .input-sub { color: #e52222; }
+.input-field.success .input-sub { color: #1f7236; }
+
+/* Label */
+.input-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-body-sm);
+  color: #121213;
+  margin-bottom: 4px;
+}
+
+/* --------------------------------------------------------
+   Dark mode inputs
+-------------------------------------------------------- */
+.input-dark .input-wrap {
+  background: #ffffff;
+  border-color: #a1a1aa;
+}
+.input-dark .input-wrap input { color: #121213; }
+.input-dark .input-wrap input::placeholder { color: #808088; }
+.input-dark .input-icon { color: #dadae0; }
+.input-dark .input-wrap:hover { border-color: #ac8eec; }
+.input-dark:focus-within .input-wrap { border-color: #7443df; }
+
+/* --------------------------------------------------------
+   Segment control (tab selector)
+-------------------------------------------------------- */
+.segment {
+  display: inline-flex;
+  border-radius: 8px;
+  background: #f3f3f5;
+  padding: 2px;
+  gap: 2px;
+}
+
+.segment-item {
+  padding: 6px 16px;
+  border-radius: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-label-segment-md);
+  line-height: 24px;
+  color: #808088;
+  transition: background 0.15s, color 0.15s;
+}
+
+.segment-item.active,
+.segment-item:hover {
+  background: #ffffff;
+  color: #121213;
+  box-shadow: 0 1px 3px rgba(18,18,19,0.12);
+}
+
+/* --------------------------------------------------------
+   Selection Controls — Checkbox, Radio, Switch
+-------------------------------------------------------- */
+
+/* Checkbox */
+.checkbox-wrap,
+.radio-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-input,
+.radio-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #dadae0;
+  background: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 0.15s, background 0.15s;
+  position: relative;
+}
+
+.checkbox-input { border-radius: 4px; }
+.radio-input    { border-radius: 50%; }
+
+.checkbox-input:hover,
+.radio-input:hover { border-color: #9069e5; }
+
+.checkbox-input:checked {
+  background: #7443df;
+  border-color: #7443df;
+}
+.checkbox-input:checked::after {
+  content: '';
+  position: absolute;
+  left: 4px; top: 1px;
+  width: 6px; height: 10px;
+  border: 2px solid white;
+  border-top: none; border-left: none;
+  transform: rotate(45deg);
+}
+
+.radio-input:checked {
+  border-color: #7443df;
+}
+.radio-input:checked::after {
+  content: '';
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  width: 8px; height: 8px;
+  background: #7443df;
+  border-radius: 50%;
+}
+
+.checkbox-input:disabled,
+.radio-input:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.checkbox-label,
+.radio-label {
+  font-family: var(--font-body);
+  font-size: var(--text-body-md);
+  color: #121213;
+}
+
+/* Switch */
+.switch-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.switch-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 44px;
+  height: 24px;
+  border-radius: 999px;
+  background: #dadae0;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.switch-input::after {
+  content: '';
+  position: absolute;
+  top: 2px; left: 2px;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: var(--shadow-switch-thumb);
+  transition: transform 0.2s;
+}
+
+.switch-input:checked {
+  background: #7443df;
+}
+.switch-input:checked::after {
+  transform: translateX(20px);
+}
+
+.switch-input:disabled { opacity: 0.4; cursor: not-allowed; }

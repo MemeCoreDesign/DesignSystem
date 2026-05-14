@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MemeCore — Buttons</title>
+  <link rel="stylesheet" href="../tokens.css" />
+  <link rel="stylesheet" href="buttons.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg-night); color: var(--color-white); font-family: var(--font-body); padding: 48px 40px; }
+    h2 { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-light); margin: 48px 0 24px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    h2:first-of-type { margin-top: 0; }
+    .row { display: flex; align-items: flex-end; gap: 20px; flex-wrap: wrap; margin-bottom: 16px; }
+    .label { font-size: 11px; color: rgba(255,255,255,0.35); margin-bottom: 8px; }
+    .col { display: flex; flex-direction: column; }
+    .dark-bg { background: var(--color-bg-grants); padding: 24px; border-radius: 4px; display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-end; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     Inline SVG sprite — all pixel icons as <symbol> elements
+     Usage: <use href="#icon-NAME"/>
+═══════════════════════════════════════════════════════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="icon-arrow-down" viewBox="31.0 24.0 18.0 11.0">
+    <path d="M48 26V27H47V28H46V29H45V30H44V31H43V32H42V33H41V34H39V33H38V32H37V31H36V30H35V29H34V28H33V27H32V26H33V25H34V26H35V27H36V28H37V29H38V30H39V31H41V30H42V29H43V28H44V27H45V26H46V25H47V26H48Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-arrow-left" viewBox="34.0 21.0 11.0 18.0">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M42.5 22H43.5V23H44.5V24H43.5V25H42.5V26H41.5V27H40.5V28H39.5V29H38.5V30V31H39.5V32H40.5V33H41.5V34H42.5V35H43.5V36H44.5V37H43.5V38H42.5V37H41.5V36H40.5V35H39.5V34H38.5V33H37.5V32H36.5V31H35.5V29H36.5V28H37.5V27H38.5V26H39.5V25H40.5V24H41.5V23H42.5V22Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-arrow-right" viewBox="34.0 21.0 11.0 18.0">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M37 22H36V23H35V24H36V25H37V26H38V27H39V28H40V29H41V30V31H40V32H39V33H38V34H37V35H36V36H35V37H36V38H37V37H38V36H39V35H40V34H41V33H42V32H43V31H44V29H43V28H42V27H41V26H40V25H39V24H38V23H37V22Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-arrow-up" viewBox="31.0 24.0 18.0 11.0">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M39 25H41V26H42V27H43V28H44V29H45V30H46V31H47V32H46V33H45V32H44V31H43V30H42V29H41V28H40V27H39V28H38V29H37V30H36V31H35V32H34V33H33V32H32V31H33V30H34V29H35V28H36V27H37V26H38V25H39Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-check" viewBox="29.0 21.0 22.0 16.0">
+    <path d="M50 22V24H49V25H48V26H47V27H46V28H45V29H44V30H43V31H42V32H41V33H40V34H39V35H37V34H36V33H35V32H34V31H33V30H32V29H31V28H30V27H31V28H32V29H33V30H34V31H35V32H36V33H37V34H39V33H40V32H41V31H42V30H43V29H44V28H45V27H46V26H47V25H48V24H49V22H50Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-check-circle" viewBox="18.0 18.0 24.0 24.0">
+    <path d="M37 27V28H36V29H35V30H34V31H33V32H32V33H31V34H30V35H28V34H27V33H26V32H25V31H24V30H25V29H26V30H27V31H28V32H30V31H31V30H32V29H33V28H34V27H35V26H36V27H37Z" fill="currentColor"/>
+    <path d="M40 27V25H39V23H38V22H37V21H35V20H33V19H27V20H25V21H23V22H22V23H21V25H20V27H19V33H20V35H21V37H22V38H23V39H25V40H27V41H33V40H35V39H37V38H38V37H39V35H40V33H41V27H40ZM38 33V35H37V37H35V38H33V39H27V38H25V37H23V35H22V33H21V27H22V25H23V23H25V22H27V21H33V22H35V23H37V25H38V27H39V33H38Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-copy" viewBox="21.0 19.0 26.0 30.0">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M29 20H39V27H46V43H45V44H29V43H28V27H29V20ZM38 21H30V27H29V43H45V28H38V21ZM39 21V27H45L39 21Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-delete" viewBox="20.0 18.0 21.0 24.0">
+    <path d="M36.5 23V22H35.5V21H34.5V20H33.5V19H27.5V20H26.5V21H25.5V22H24.5V23H20.5V25H21.5V24H39.5V25H40.5V23H36.5Z" fill="currentColor"/>
+    <path d="M38.5 25H22.5V41H23.5V42H37.5V41H38.5V25ZM24.5 26H23.5V41H24.5V26ZM37.5 26H36.5V41H37.5V26Z" fill="currentColor"/>
+    <path d="M28.5 27H27.5V40H28.5V27Z" fill="currentColor"/>
+    <path d="M31.5 27H30.5V40H31.5V27Z" fill="currentColor"/>
+    <path d="M34.5 27H33.5V40H34.5V27Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-info-circle" viewBox="18.0 18.0 24.0 24.0">
+    <path d="M32 33V35H28V33H29V28H28V27H31V33H32Z" fill="currentColor"/>
+    <path d="M32 24V22H29V24H32Z" fill="currentColor"/>
+    <path d="M40 27V25H39V23H38V22H37V21H35V20H33V19H27V20H25V21H23V22H22V23H21V25H20V27H19V33H20V35H21V37H22V38H23V39H25V40H27V41H33V40H35V39H37V38H38V37H39V35H40V33H41V27H40ZM38 33V35H37V37H35V38H33V39H27V38H25V37H23V35H22V33H21V27H22V25H23V23H25V22H27V21H33V22H35V23H37V25H38V27H39V33H38Z" fill="currentColor"/>
+    <path d="M29 27V28H31V27H29Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-minus" viewBox="21.0 28.0 18.0 4.0">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M39 29H21V31H39V29Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-more-dot" viewBox="18.0 40.0 24.0 8.0">
+    <path d="M32 43H33V45H32V46H31V47H29V46H28V45H27V43H28V42H29V41H31V42H32V43Z" fill="currentColor"/>
+    <path d="M22 43H23V45H22V46H21V47H19V46H18V45H17V43H18V42H19V41H21V42H22V43Z" fill="currentColor"/>
+    <path d="M42 43H43V45H42V46H41V47H39V46H38V45H37V43H38V42H39V41H41V42H42V43Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-outlink" viewBox="19.0 19.0 22.0 22.0">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 20H29V22H22V38H38V32H40V40H20V20ZM32 20H40V28H38V23.83L27.41 34.41L26 33L36.17 22H32V20Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-plus" viewBox="21.0 21.0 18.0 18.0">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M31 22H29V29H22V31H29V38H31V31H38V29H31V22Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-refresh" viewBox="20.0 18.0 20.0 24.0">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M35 23H23H21V25V29H23V25H35V26H37V28H38V30H37V32H36V33H35V34H23V30H21V42H39V30H37V34H35V36H23V32H25V34H35V32H37V30H39V28H38V26H37V24H35V23Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-search" viewBox="18.0 18.0 24.0 24.0">
+    <path d="M40 38V37H39V36H38V35H37V34H35V33H36V31H37V25H36V23H35V22H34V21H33V20H27V21H26V22H25V23H24V25H23V31H24V33H25V34H26V35H27V36H33V35H35V36H36V37H37V38H38V39H39V40H40V38ZM35 31V33H33V34H27V33H25V31H24V25H25V23H27V22H33V23H35V25H36V31H35Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-warning" viewBox="18.0 18.0 24.0 24.0">
+    <path d="M40 38V36H39V34H38V32H37V30H36V28H35V26H34V24H33V22H32V20H31V19H29V20H28V22H27V24H26V26H25V28H24V30H23V32H22V34H21V36H20V38H19V41H21V42H39V41H41V38H40ZM30 22H31V24H32V26H33V28H34V30H35V32H36V34H37V36H38V38H39V40H21V38H22V36H23V34H24V32H25V30H26V28H27V26H28V24H29V22H30Z" fill="currentColor"/>
+    <path d="M31 33V24H30V33H31Z" fill="currentColor"/>
+    <path d="M31 36V34H30V36H31Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-x-circle" viewBox="18.0 18.0 24.0 24.0">
+    <path d="M40 27V25H39V23H38V22H37V21H35V20H33V19H27V20H25V21H23V22H22V23H21V25H20V27H19V33H20V35H21V37H22V38H23V39H25V40H27V41H33V40H35V39H37V38H38V37H39V35H40V33H41V27H40ZM38 33V35H37V37H35V38H33V39H27V38H25V37H23V35H22V33H21V27H22V25H23V23H25V22H27V21H33V22H35V23H37V25H38V27H39V33H38Z" fill="currentColor"/>
+    <path d="M35 25V24H34V25H33V26H32V27H31V28H30V29H29V30H28V31H27V32H26V33H27V32H28V31H29V30H30V29H31V28H32V27H33V26H34V25H35Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-x-close" viewBox="21.0 22.0 18.0 16.0">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M22 23H26V25H28V27H32V25H34V23H38V25H36V27H34V29H32V31H34V33H36V35H38V37H34V35H32V33H30V31H28V33H26V35H24V37H22V35H24V33H26V31H28V29H26V27H24V25H22V23Z" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+  <h2>Primary</h2>
+  <div class="row">
+    <div class="col"><div class="label">lg</div>
+      <button class="btn btn-primary btn-lg"><span class="btn-body">Get Started</span></button>
+    </div>
+    <div class="col"><div class="label">lg + icon (arrow-right)</div>
+      <button class="btn btn-primary btn-lg">
+        <span class="btn-body">
+          <svg class="btn-icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+          Get Started
+        </span>
+      </button>
+    </div>
+    <div class="col"><div class="label">lg + icon (check-circle)</div>
+      <button class="btn btn-primary btn-lg">
+        <span class="btn-body">
+          <svg class="btn-icon" aria-hidden="true"><use href="#icon-check-circle"/></svg>
+          Confirmed
+        </span>
+      </button>
+    </div>
+    <div class="col"><div class="label">md</div>
+      <button class="btn btn-primary btn-md"><span class="btn-body">Get Started</span></button>
+    </div>
+    <div class="col"><div class="label">sm</div>
+      <button class="btn btn-primary btn-sm"><span class="btn-body">Go</span></button>
+    </div>
+    <div class="col"><div class="label">disabled</div>
+      <button class="btn btn-primary btn-lg disabled"><span class="btn-body">Get Started</span></button>
+    </div>
+  </div>
+
+  <h2>Secondary</h2>
+  <div class="row">
+    <div class="col"><div class="label">lg</div>
+      <button class="btn btn-secondary btn-lg"><span class="btn-body">Explore More</span></button>
+    </div>
+    <div class="col"><div class="label">lg + icon (outlink)</div>
+      <button class="btn btn-secondary btn-lg">
+        <span class="btn-body">
+          <svg class="btn-icon" aria-hidden="true"><use href="#icon-outlink"/></svg>
+          Learn More
+        </span>
+      </button>
+    </div>
+    <div class="col"><div class="label">md</div>
+      <button class="btn btn-secondary btn-md"><span class="btn-body">Explore More</span></button>
+    </div>
+    <div class="col"><div class="label">sm</div>
+      <button class="btn btn-secondary btn-sm"><span class="btn-body">View</span></button>
+    </div>
+    <div class="col"><div class="label">disabled</div>
+      <button class="btn btn-secondary btn-lg disabled"><span class="btn-body">Explore More</span></button>
+    </div>
+  </div>
+
+  <h2>Tertiary</h2>
+  <div class="row">
+    <div class="col"><div class="label">lg</div>
+      <button class="btn btn-tertiary btn-lg"><span class="btn-body">Learn More</span></button>
+    </div>
+    <div class="col"><div class="label">lg + icon (info-circle)</div>
+      <button class="btn btn-tertiary btn-lg">
+        <span class="btn-body">
+          <svg class="btn-icon" aria-hidden="true"><use href="#icon-info-circle"/></svg>
+          Details
+        </span>
+      </button>
+    </div>
+    <div class="col"><div class="label">md</div>
+      <button class="btn btn-tertiary btn-md"><span class="btn-body">Learn More</span></button>
+    </div>
+    <div class="col"><div class="label">sm</div>
+      <button class="btn btn-tertiary btn-sm"><span class="btn-body">More</span></button>
+    </div>
+    <div class="col"><div class="label">disabled</div>
+      <button class="btn btn-tertiary btn-lg disabled"><span class="btn-body">Learn More</span></button>
+    </div>
+  </div>
+
+  <h2>Icon Variants — Swap Examples</h2>
+  <div class="row">
+    <div class="col"><div class="label">warning</div>
+      <button class="btn btn-primary btn-md">
+        <span class="btn-body">
+          <svg class="btn-icon" aria-hidden="true"><use href="#icon-warning"/></svg>Alert
+        </span>
+      </button>
+    </div>
+    <div class="col"><div class="label">search</div>
+      <button class="btn btn-secondary btn-md">
+        <span class="btn-body">
+          <svg class="btn-icon" aria-hidden="true"><use href="#icon-search"/></svg>Search
+        </span>
+      </button>
+    </div>
+    <div class="col"><div class="label">plus</div>
+      <button class="btn btn-primary btn-md">
+        <span class="btn-body">
+          <svg class="btn-icon" aria-hidden="true"><use href="#icon-plus"/></svg>Add
+        </span>
+      </button>
+    </div>
+    <div class="col"><div class="label">refresh</div>
+      <button class="btn btn-tertiary btn-md">
+        <span class="btn-body">
+          <svg class="btn-icon" aria-hidden="true"><use href="#icon-refresh"/></svg>Retry
+        </span>
+      </button>
+    </div>
+    <div class="col"><div class="label">x-close</div>
+      <button class="btn btn-secondary btn-md">
+        <span class="btn-body">
+          <svg class="btn-icon" aria-hidden="true"><use href="#icon-x-close"/></svg>Dismiss
+        </span>
+      </button>
+    </div>
+    <div class="col"><div class="label">copy</div>
+      <button class="btn btn-tertiary btn-md">
+        <span class="btn-body">
+          <svg class="btn-icon" aria-hidden="true"><use href="#icon-copy"/></svg>Copy
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <h2>Line Button</h2>
+  <div class="row">
+    <div class="col"><div class="label">light / lg</div>
+      <button class="btn-line btn-line-light btn-lg" style="color:var(--color-white)">View All</button>
+    </div>
+    <div class="col"><div class="label">light / lg + icon</div>
+      <button class="btn-line btn-line-light btn-lg" style="color:var(--color-white)">
+        <svg class="btn-icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+        View All
+      </button>
+    </div>
+    <div class="col"><div class="label">light / md</div>
+      <button class="btn-line btn-line-light btn-md" style="color:var(--color-white)">View All</button>
+    </div>
+    <div class="col"><div class="label">light / disabled</div>
+      <button class="btn-line btn-line-light btn-lg disabled" style="color:rgba(255,255,255,.3)">View All</button>
+    </div>
+  </div>
+  <div class="dark-bg">
+    <div class="col"><div class="label" style="color:rgba(255,255,255,.4)">dark / lg</div>
+      <button class="btn-line btn-line-dark btn-lg">View All</button>
+    </div>
+    <div class="col"><div class="label" style="color:rgba(255,255,255,.4)">dark / lg + icon</div>
+      <button class="btn-line btn-line-dark btn-lg">
+        <svg class="btn-icon" aria-hidden="true"><use href="#icon-outlink"/></svg>
+        Documentation
+      </button>
+    </div>
+    <div class="col"><div class="label" style="color:rgba(255,255,255,.4)">dark / md</div>
+      <button class="btn-line btn-line-dark btn-md">View All</button>
+    </div>
+    <div class="col"><div class="label" style="color:rgba(255,255,255,.4)">dark / disabled</div>
+      <button class="btn-line btn-line-dark btn-lg disabled">View All</button>
+    </div>
+  </div>
+
+  <h2>Text Button</h2>
+  <div class="row">
+    <div class="col"><div class="label">light</div>
+      <button class="btn-text btn-text-light body-medium-md" style="color:white">Read more →</button>
+    </div>
+    <div class="col"><div class="label">dark</div>
+      <button class="btn-text btn-text-dark body-medium-md">Read more →</button>
+    </div>
+  </div>
+
+  <h2>Link Button</h2>
+  <div class="row">
+    <div class="col"><div class="label">light / lg</div>
+      <a href="#" class="btn-link btn-link-light btn-lg" style="color:var(--color-white)">Documentation ↗</a>
+    </div>
+    <div class="col"><div class="label">dark / lg</div>
+      <a href="#" class="btn-link btn-link-dark btn-lg">Documentation ↗</a>
+    </div>
+    <div class="col"><div class="label">dark / md</div>
+      <a href="#" class="btn-link btn-link-dark btn-md">Documentation ↗</a>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+/* ==========================================================
+   MemeCore — Navigation (GNB)
+   Source: Figma [Main Site] Design System - V3 > Navigations
+   ========================================================== */
+
+/* --------------------------------------------------------
+   GNB — Global Navigation Bar
+   Light mode: bg=#f2ede4 (warm beige/cream)
+   Dark mode:  bg=#121213
+   Height: 92px desktop / 80px tablet / 72px mobile
+-------------------------------------------------------- */
+.gnb {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: 92px;
+  background: #f2ede4;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(18,18,19,0.08);
+}
+
+.gnb-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* Logo */
+.gnb-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  width: 204px;
+}
+.gnb-logo img,
+.gnb-logo svg { height: 32px; width: auto; }
+
+/* Menu links */
+.gnb-menu {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex: 1;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+.gnb-menu-item {
+  position: relative;
+}
+
+.gnb-menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-body-md);
+  color: #121213;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.gnb-menu-btn:hover { background: rgba(18,18,19,0.06); }
+.gnb-menu-btn.active { color: #7443df; font-weight: 600; }
+
+/* Dropdown indicator */
+.gnb-menu-btn .chevron {
+  width: 16px; height: 16px;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.gnb-menu-item.open .chevron { transform: rotate(180deg); }
+
+/* GNB right actions */
+.gnb-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------
+   Dropdown Menu
+-------------------------------------------------------- */
+.gnb-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 200px;
+  background: #f2ede4;
+  border-radius: 12px;
+  box-shadow: var(--shadow-dropdown);
+  padding: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity 0.15s, transform 0.15s;
+  z-index: 100;
+}
+
+.gnb-menu-item.open .gnb-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.gnb-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-body-md);
+  color: #121213;
+  transition: background 0.12s;
+  white-space: nowrap;
+}
+.gnb-dropdown-item:hover { background: rgba(18,18,19,0.06); }
+.gnb-dropdown-item .icon { width: 20px; height: 20px; flex-shrink: 0; }
+
+/* --------------------------------------------------------
+   Dark mode GNB
+-------------------------------------------------------- */
+.gnb-dark {
+  background: #121213;
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+.gnb-dark .gnb-menu-btn { color: #e7e7eb; }
+.gnb-dark .gnb-menu-btn:hover { background: rgba(255,255,255,0.06); }
+.gnb-dark .gnb-menu-btn.active { color: #c7b4f2; }
+.gnb-dark .gnb-dropdown { background: #1e1e28; }
+.gnb-dark .gnb-dropdown-item { color: #e7e7eb; }
+.gnb-dark .gnb-dropdown-item:hover { background: rgba(255,255,255,0.06); }
+
+/* --------------------------------------------------------
+   Mobile hamburger button
+-------------------------------------------------------- */
+.gnb-hamburger {
+  display: none;
+  width: 56px; height: 56px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+.gnb-hamburger:hover { background: rgba(18,18,19,0.06); }
+.gnb-hamburger span {
+  display: block;
+  width: 24px; height: 2px;
+  background: #121213;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.gnb-dark .gnb-hamburger span { background: #e7e7eb; }
+
+/* Hamburger → X when open */
+.gnb.open .gnb-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.gnb.open .gnb-hamburger span:nth-child(2) { opacity: 0; }
+.gnb.open .gnb-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* --------------------------------------------------------
+   Responsive
+-------------------------------------------------------- */
+@media (max-width: 1279px) {
+  .gnb { height: 80px; }
+  .gnb-menu { display: none; }
+  .gnb-hamburger { display: flex; }
+}
+
+@media (max-width: 767px) {
+  .gnb { height: 72px; }
+}
+
+/* Mobile nav overlay */
+.gnb-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 80px; left: 0; right: 0; bottom: 0;
+  background: #f2ede4;
+  z-index: 999;
+  overflow-y: auto;
+  padding: 16px 24px 40px;
+}
+
+.gnb-dark .gnb-mobile-menu { background: #121213; }
+
+.gnb.open .gnb-mobile-menu { display: block; }
+
+.gnb-mobile-menu .gnb-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.gnb-mobile-menu .gnb-menu-btn { padding: 14px 4px; }
+
+/* --------------------------------------------------------
+   Pagination
+-------------------------------------------------------- */
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.page-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: 6px;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-body-sm);
+  color: #5e5e65;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+.page-btn:hover { background: #f1ecfc; color: #7443df; }
+.page-btn.active { background: #7443df; color: #ffffff; }
+.page-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.page-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: 6px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #5e5e65;
+  transition: background 0.12s;
+}
+.page-arrow:hover { background: #f1ecfc; color: #7443df; }
+.page-arrow:disabled { opacity: 0.35; cursor: not-allowed; }

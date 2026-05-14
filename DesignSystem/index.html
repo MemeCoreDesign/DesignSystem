@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MemeCore Design System</title>
+  <link rel="stylesheet" href="tokens.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg-night); color: var(--color-white); font-family: var(--font-body); padding: 48px 40px; }
+    h1 { font-family: var(--font-display); font-size: 32px; margin-bottom: 8px; }
+    .subtitle { color: rgba(255,255,255,0.5); font-size: 14px; margin-bottom: 48px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+    .card {
+      background: var(--color-bg-night-mid);
+      border-radius: 12px;
+      padding: 24px;
+      text-decoration: none;
+      color: var(--color-white);
+      transition: background 0.15s, transform 0.15s;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .card:hover { background: #263450; transform: translateY(-2px); }
+    .card-icon { font-size: 28px; margin-bottom: 12px; }
+    .card-title { font-weight: 600; font-size: 16px; margin-bottom: 6px; }
+    .card-desc { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.5; }
+    .card-status { display: inline-block; margin-top: 10px; font-size: 10px; padding: 2px 8px; border-radius: 999px; }
+    .done { background: #1f7236; color: #b6ebc5; }
+    .section-title { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-light); margin: 40px 0 16px; }
+  </style>
+</head>
+<body>
+  <h1>MemeCore Design System</h1>
+  <p class="subtitle">Source: Figma [Main Site] Design System - V3 &nbsp;·&nbsp; Generated 2026-05-14</p>
+
+  <div class="section-title">Tokens</div>
+  <div class="grid">
+    <a class="card" href="tokens-preview.html">
+      <div class="card-icon">🎨</div>
+      <div class="card-title">Design Tokens</div>
+      <div class="card-desc">Colors, typography, shadows — CSS Variables &amp; JS tokens</div>
+      <span class="card-status done">Done</span>
+    </a>
+  </div>
+
+  <div class="section-title">Components</div>
+  <div class="grid">
+    <a class="card" href="components/buttons.html">
+      <div class="card-icon">🔘</div>
+      <div class="card-title">Buttons</div>
+      <div class="card-desc">Primary, Secondary, Tertiary, Line, Text, Link — pixel-frame style</div>
+      <span class="card-status done">Done</span>
+    </a>
+    <a class="card" href="components/chips-preview.html">
+      <div class="card-icon">🏷️</div>
+      <div class="card-title">Chips &amp; Tags</div>
+      <div class="card-desc">9 color variants × light/dark mode, dismissible chips</div>
+      <span class="card-status done">Done</span>
+    </a>
+    <a class="card" href="components/inputs-preview.html">
+      <div class="card-icon">✏️</div>
+      <div class="card-title">Inputs</div>
+      <div class="card-desc">Text fields, segment control, checkbox, radio, switch</div>
+      <span class="card-status done">Done</span>
+    </a>
+    <a class="card" href="components/navigation-preview.html">
+      <div class="card-icon">🧭</div>
+      <div class="card-title">Navigation</div>
+      <div class="card-desc">GNB (light/dark), dropdown, mobile hamburger, pagination</div>
+      <span class="card-status done">Done</span>
+    </a>
+    <a class="card" href="components/footer-preview.html">
+      <div class="card-icon">📋</div>
+      <div class="card-title">Footer</div>
+      <div class="card-desc">Dark footer, sitemap grid, social icons, responsive</div>
+      <span class="card-status done">Done</span>
+    </a>
+    <div class="card" style="opacity:0.4;cursor:default">
+      <div class="card-icon">🃏</div>
+      <div class="card-title">Cards</div>
+      <div class="card-desc">Ecosystem cards, exchange cards, list cards</div>
+    </div>
+    <div class="card" style="opacity:0.4;cursor:default">
+      <div class="card-icon">🔵</div>
+      <div class="card-title">Pixel SVG</div>
+      <div class="card-desc">Pixel frame corners, decorative SVG assets</div>
+    </div>
+  </div>
+</body>
+</html>
