@@ -1,0 +1,427 @@
+/* ==========================================================
+   MemeCore — Cards
+   Source: Figma [Main Site] Design System V3 > Cards
+   Components: cardEcosystem, cardExchanges, cardLists
+   ========================================================== */
+
+/* ──────────────────────────────────────────────────────────
+   Shared card base
+────────────────────────────────────────────────────────── */
+.card-ecosystem,
+.card-exchange,
+.card-list {
+  position: relative;
+  background: var(--color-white);
+  box-sizing: border-box;
+}
+
+/* ──────────────────────────────────────────────────────────
+   Tag atoms (used inside cards)
+────────────────────────────────────────────────────────── */
+.card-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px 4px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.card-tag--black {
+  background: var(--color-black);
+  border: 1px solid var(--color-border-dark);
+  color: var(--color-neutral-100);
+}
+
+.card-tag--yellow {
+  background: var(--color-tag-yellow-bg);
+  border: 1px solid var(--color-tag-yellow-bg);
+  color: var(--color-tag-yellow-text);
+}
+
+/* ──────────────────────────────────────────────────────────
+   A. cardEcosystem
+   Figma: 282×320, borderRadius 32px, padding 28px 28px 24px
+────────────────────────────────────────────────────────── */
+.card-ecosystem {
+  width: 282px;
+  height: 320px;
+  border-radius: 32px;
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.card-ecosystem__text-area {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  gap: 20px;
+}
+
+.card-ecosystem__header {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 16px;
+}
+
+.card-ecosystem__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 100px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--color-neutral-100);
+}
+
+.card-ecosystem__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-ecosystem__slot {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+}
+
+.card-ecosystem__title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--color-black);
+}
+
+.card-ecosystem__desc {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-gray-700);
+  flex: 1;
+}
+
+.card-ecosystem__tags {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.card-ecosystem__more {
+  position: absolute;
+  right: 28px;
+  bottom: 56px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  font-family: 'Roboto', var(--font-body);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 124%;
+  letter-spacing: 0.015em;
+  color: var(--color-gray-600);
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.card-ecosystem--show-more .card-ecosystem__more {
+  display: inline-flex;
+}
+
+/* ──────────────────────────────────────────────────────────
+   B. cardExchanges
+   Figma: PC 378×310 / Mobile 333×164, borderRadius 32px/24px
+────────────────────────────────────────────────────────── */
+.card-exchange {
+  border-radius: 32px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 12px;
+  width: 378px;
+  height: 310px;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.card-exchange__text-area {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  gap: 24px;
+}
+
+.card-exchange__img {
+  width: 76px;
+  height: 76px;
+  border-radius: 16px;
+  background: var(--color-neutral-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  padding: 13px;
+  box-sizing: border-box;
+}
+
+.card-exchange__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-exchange__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+}
+
+.card-exchange__title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 120%;
+  color: var(--color-black);
+}
+
+.card-exchange__desc {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-gray-700);
+  flex: 1;
+}
+
+.card-exchange__btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.15s;
+}
+
+.card-exchange__btn svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: var(--color-white);
+  stroke-width: 1.5;
+}
+
+/* States */
+.card-exchange:hover {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow-ticket);
+}
+
+.card-exchange--disabled {
+  background: var(--color-gray-300);
+  pointer-events: none;
+}
+
+.card-exchange--disabled .card-exchange__title,
+.card-exchange--disabled .card-exchange__desc {
+  color: var(--color-gray-600);
+}
+
+.card-exchange--disabled .card-exchange__btn {
+  opacity: 0.4;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .card-exchange {
+    width: 333px;
+    height: 164px;
+    border-radius: 24px;
+    padding: 28px;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .card-exchange__text-area {
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .card-exchange__img {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    padding: 10px;
+  }
+
+  .card-exchange__title {
+    font-size: 20px;
+  }
+
+  .card-exchange__desc {
+    display: none;
+  }
+
+  .card-exchange__btn {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────
+   C. cardLists
+   Figma: PC 1200×250 / Mobile 320×368, borderRadius 32px/24px
+────────────────────────────────────────────────────────── */
+.card-list {
+  width: 1200px;
+  height: 250px;
+  border-radius: 32px;
+  box-shadow: 4px 8px 40px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+  overflow: hidden;
+}
+
+.card-list__img {
+  width: 380px;
+  height: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: var(--color-neutral-100);
+}
+
+.card-list__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-list__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 28px;
+  padding: 32px 28px 32px 0;
+}
+
+.card-list__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-list__tags {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.card-list__title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--color-black);
+}
+
+.card-list__date {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-neutral-750);
+}
+
+.card-list__readmore {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 4px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--color-neutral-800);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card-list__readmore svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Disabled state */
+.card-list--disabled {
+  background: var(--color-gray-300);
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.card-list--disabled .card-list__img {
+  opacity: 0.5;
+}
+
+.card-list--disabled .card-list__title,
+.card-list--disabled .card-list__date {
+  color: var(--color-gray-600);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .card-list {
+    width: 320px;
+    height: 368px;
+    border-radius: 24px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .card-list__img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .card-list__content {
+    padding: 0 20px 20px;
+    gap: 24px;
+  }
+
+  .card-list__title {
+    font-family: var(--font-display);
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.015em;
+  }
+
+  .card-list__date {
+    font-size: 14px;
+  }
+}

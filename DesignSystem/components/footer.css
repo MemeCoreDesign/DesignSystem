@@ -1,12 +1,12 @@
 /* ==========================================================
    MemeCore — Footer
    Source: Figma [Main Site] Design System - V3 > Footer
-   bg: #121213 (dark)
+   bg: var(--color-bg-footer) #121213
    ========================================================== */
 
 .site-footer {
-  background: #121213;
-  color: #dadae0;
+  background: var(--color-bg-footer);
+  color: var(--color-text-footer);
   padding: 60px 0 32px;
 }
 
@@ -41,7 +41,7 @@
   font-family: var(--font-body);
   font-weight: 600;
   font-size: var(--text-label-footer-md);
-  color: #ffffff;
+  color: var(--color-white);
   margin-bottom: 16px;
 }
 
@@ -62,12 +62,12 @@
   font-weight: 400;
   font-size: var(--text-label-footer-md);
   line-height: 16px;
-  color: #dadae0;
+  color: var(--color-text-footer);
   text-decoration: none;
   transition: color 0.15s;
 }
-.footer-link:hover { color: #ffffff; }
-.footer-link.disabled { color: #5e5e65; pointer-events: none; }
+.footer-link:hover { color: var(--color-white); }
+.footer-link.disabled { color: var(--color-text-footer-muted); pointer-events: none; }
 
 .footer-link-sm {
   font-size: var(--text-label-footer-sm);
@@ -109,20 +109,20 @@
   justify-content: center;
   width: 36px; height: 36px;
   border-radius: 50%;
-  background: #1c1c21;
-  color: #dadae0;
+  background: var(--color-bg-social-icon);
+  color: var(--color-text-footer);
   text-decoration: none;
   transition: background 0.15s;
   flex-shrink: 0;
 }
-.footer-social-icon:hover { background: #2e2e38; }
+.footer-social-icon:hover { background: var(--color-bg-social-hover); }
 .footer-social-icon svg { width: 18px; height: 18px; }
 
 .footer-copyright {
   font-family: var(--font-body);
   font-weight: 400;
   font-size: var(--text-label-footer-sm);
-  color: #5e5e65;
+  color: var(--color-text-footer-muted);
 }
 
 /* --------------------------------------------------------

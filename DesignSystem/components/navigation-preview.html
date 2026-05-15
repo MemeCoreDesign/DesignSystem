@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MemeCore — Navigation</title>
+  <link rel="stylesheet" href="../tokens.css" />
+  <link rel="stylesheet" href="navigation.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg-night); color: var(--color-white); font-family: var(--font-body); }
+    .preview-section { padding: 40px; }
+    .preview-section + .preview-section { border-top: 1px solid rgba(255,255,255,0.06); }
+    h2 { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-light); margin-bottom: 24px; }
+    .nav-frame { position: relative; height: 100px; margin-bottom: 8px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); }
+    .nav-frame .gnb { position: absolute; }
+    .spacer { height: 120px; }
+    .pagination-wrap { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; }
+    .label { font-size: 11px; color: rgba(255,255,255,0.35); margin-bottom: 8px; }
+    .col { display: flex; flex-direction: column; }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ GNB Light ═══ -->
+  <div class="preview-section">
+    <h2>GNB — Light Mode</h2>
+    <div class="nav-frame">
+      <nav class="gnb" style="position:absolute;width:100%">
+        <div class="gnb-inner">
+          <a class="gnb-logo" href="#">
+            <svg width="120" height="32" viewBox="0 0 120 32" fill="none">
+              <rect width="120" height="32" rx="4" fill="#7443df" opacity="0.15"/>
+              <text x="8" y="22" font-family="sans-serif" font-size="14" font-weight="700" fill="#7443df">MEMECORE</text>
+            </svg>
+          </a>
+          <ul class="gnb-menu">
+            <li class="gnb-menu-item">
+              <button class="gnb-menu-btn active">Ecosystem</button>
+            </li>
+            <li class="gnb-menu-item open">
+              <button class="gnb-menu-btn">
+                Community
+                <svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polyline points="4,6 8,10 12,6"/>
+                </svg>
+              </button>
+              <div class="gnb-dropdown" style="opacity:1;pointer-events:auto;transform:translateY(0)">
+                <a class="gnb-dropdown-item" href="#">
+                  <svg class="icon" viewBox="0 0 20 20" fill="currentColor"><circle cx="10" cy="10" r="8" fill="#e7e7eb"/></svg>
+                  Forum
+                </a>
+                <a class="gnb-dropdown-item" href="#">
+                  <svg class="icon" viewBox="0 0 20 20" fill="currentColor"><circle cx="10" cy="10" r="8" fill="#e7e7eb"/></svg>
+                  Discord
+                </a>
+              </div>
+            </li>
+            <li class="gnb-menu-item"><button class="gnb-menu-btn">Grants</button></li>
+            <li class="gnb-menu-item"><button class="gnb-menu-btn">Blog</button></li>
+          </ul>
+          <div class="gnb-actions">
+            <button style="padding:8px 16px;background:var(--color-primary);color:#fff;border:none;border-radius:6px;font-family:var(--font-display);font-size:13px;cursor:pointer">LAUNCH APP</button>
+          </div>
+          <button class="gnb-hamburger" aria-label="메뉴">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <div style="font-size:11px;color:rgba(255,255,255,0.3);padding-top:4px">bg: var(--color-bg-gnb-light) #f2ede4 · height: 92px · active: var(--color-primary)</div>
+  </div>
+
+  <!-- ═══ GNB Dark ═══ -->
+  <div class="preview-section">
+    <h2>GNB — Dark Mode</h2>
+    <div class="nav-frame" style="background:#121213">
+      <nav class="gnb gnb-dark" style="position:absolute;width:100%">
+        <div class="gnb-inner">
+          <a class="gnb-logo" href="#">
+            <svg width="120" height="32" viewBox="0 0 120 32" fill="none">
+              <rect width="120" height="32" rx="4" fill="#9069e5" opacity="0.2"/>
+              <text x="8" y="22" font-family="sans-serif" font-size="14" font-weight="700" fill="#9069e5">MEMECORE</text>
+            </svg>
+          </a>
+          <ul class="gnb-menu">
+            <li class="gnb-menu-item"><button class="gnb-menu-btn active">Ecosystem</button></li>
+            <li class="gnb-menu-item">
+              <button class="gnb-menu-btn">
+                Community
+                <svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polyline points="4,6 8,10 12,6"/>
+                </svg>
+              </button>
+            </li>
+            <li class="gnb-menu-item"><button class="gnb-menu-btn">Grants</button></li>
+            <li class="gnb-menu-item"><button class="gnb-menu-btn">Blog</button></li>
+          </ul>
+          <div class="gnb-actions">
+            <button style="padding:8px 16px;background:var(--color-primary);color:#fff;border:none;border-radius:6px;font-family:var(--font-display);font-size:13px;cursor:pointer">LAUNCH APP</button>
+          </div>
+          <button class="gnb-hamburger" aria-label="메뉴">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <div style="font-size:11px;color:rgba(255,255,255,0.3);padding-top:4px">bg: var(--color-black) #121213 · active: var(--color-primary-mid) #c7b4f2 · dropdown: var(--color-bg-dropdown-dark)</div>
+  </div>
+
+  <!-- ═══ Dropdown (isolated) ═══ -->
+  <div class="preview-section">
+    <h2>Dropdown Menu</h2>
+    <div style="display:flex;gap:40px;flex-wrap:wrap">
+      <div class="col">
+        <div class="label">Light mode</div>
+        <div style="background:var(--color-bg-gnb-light);border-radius:12px;box-shadow:var(--shadow-dropdown);padding:8px;display:inline-flex;flex-direction:column;gap:2px;min-width:200px">
+          <a class="gnb-dropdown-item" href="#">Forum</a>
+          <a class="gnb-dropdown-item" href="#">Discord</a>
+          <a class="gnb-dropdown-item" href="#">Twitter</a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="label">Dark mode</div>
+        <div style="background:var(--color-bg-dropdown-dark);border-radius:12px;box-shadow:var(--shadow-dropdown);padding:8px;display:inline-flex;flex-direction:column;gap:2px;min-width:200px">
+          <a class="gnb-dropdown-item" style="color:var(--color-gray-200)" href="#">Forum</a>
+          <a class="gnb-dropdown-item" style="color:var(--color-gray-200)" href="#">Discord</a>
+          <a class="gnb-dropdown-item" style="color:var(--color-gray-200)" href="#">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Mobile Hamburger ═══ -->
+  <div class="preview-section">
+    <h2>Mobile Hamburger</h2>
+    <div style="display:flex;gap:32px;align-items:center;flex-wrap:wrap">
+      <div class="col">
+        <div class="label">Light / default</div>
+        <button class="gnb-hamburger" style="display:flex;background:var(--color-bg-gnb-light)">
+          <span style="background:var(--color-black)"></span>
+          <span style="background:var(--color-black)"></span>
+          <span style="background:var(--color-black)"></span>
+        </button>
+      </div>
+      <div class="col">
+        <div class="label">Light / open (X)</div>
+        <button class="gnb-hamburger" style="display:flex;background:var(--color-bg-gnb-light)">
+          <span style="background:var(--color-black);transform:translateY(7px) rotate(45deg)"></span>
+          <span style="background:var(--color-black);opacity:0"></span>
+          <span style="background:var(--color-black);transform:translateY(-7px) rotate(-45deg)"></span>
+        </button>
+      </div>
+      <div class="col">
+        <div class="label">Dark / default</div>
+        <button class="gnb-hamburger" style="display:flex;background:#121213">
+          <span style="background:var(--color-gray-200)"></span>
+          <span style="background:var(--color-gray-200)"></span>
+          <span style="background:var(--color-gray-200)"></span>
+        </button>
+      </div>
+      <div class="col">
+        <div class="label">Dark / open (X)</div>
+        <button class="gnb-hamburger" style="display:flex;background:#121213">
+          <span style="background:var(--color-gray-200);transform:translateY(7px) rotate(45deg)"></span>
+          <span style="background:var(--color-gray-200);opacity:0"></span>
+          <span style="background:var(--color-gray-200);transform:translateY(-7px) rotate(-45deg)"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Pagination ═══ -->
+  <div class="preview-section">
+    <h2>Pagination</h2>
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div class="col">
+        <div class="label">Default</div>
+        <nav class="pagination">
+          <button class="page-arrow" disabled>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="10,4 6,8 10,12"/></svg>
+          </button>
+          <button class="page-btn">1</button>
+          <button class="page-btn active">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">4</button>
+          <button class="page-btn">5</button>
+          <button class="page-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6,4 10,8 6,12"/></svg>
+          </button>
+        </nav>
+      </div>
+      <div class="col">
+        <div class="label">With ellipsis</div>
+        <nav class="pagination">
+          <button class="page-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="10,4 6,8 10,12"/></svg>
+          </button>
+          <button class="page-btn">1</button>
+          <button class="page-btn">...</button>
+          <button class="page-btn">4</button>
+          <button class="page-btn active">5</button>
+          <button class="page-btn">6</button>
+          <button class="page-btn">...</button>
+          <button class="page-btn">12</button>
+          <button class="page-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6,4 10,8 6,12"/></svg>
+          </button>
+        </nav>
+      </div>
+    </div>
+    <div style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:16px">hover/active: var(--color-secondary-bg) · active bg: var(--color-primary)</div>
+  </div>
+
+  <script>
+    // Dropdown toggle demo
+    document.querySelectorAll('.gnb-menu-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.gnb-menu-item');
+        if (item) item.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

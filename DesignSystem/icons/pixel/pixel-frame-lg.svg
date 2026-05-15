@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <!--
+    _pixel-frame-lg  (9×9px corner accent, 3px grid, 3-step staircase)
+    Source: Figma [Main Site] Design System V3 > Pixel (SVG)
+    Usage: <svg><use href="pixel-frame-lg.svg#top-left"/></svg>
+  -->
+
+  <!-- Top-Left -->
+  <symbol id="top-left" viewBox="0 0 9 9" width="9" height="9">
+    <rect x="0" y="0" width="9" height="3" fill="#121213"/>
+    <rect x="0" y="3" width="6" height="3" fill="#121213"/>
+    <rect x="0" y="6" width="3" height="3" fill="#121213"/>
+    <rect x="3" y="3" width="3" height="3" fill="#A1A1AA"/>
+    <rect x="3" y="6" width="6" height="3" fill="#A1A1AA"/>
+  </symbol>
+
+  <!-- Top-Right -->
+  <symbol id="top-right" viewBox="0 0 9 9" width="9" height="9">
+    <rect x="0" y="0" width="9" height="3" fill="#121213"/>
+    <rect x="3" y="3" width="6" height="3" fill="#121213"/>
+    <rect x="6" y="6" width="3" height="3" fill="#121213"/>
+    <rect x="0" y="3" width="3" height="3" fill="#A1A1AA"/>
+    <rect x="0" y="6" width="6" height="3" fill="#A1A1AA"/>
+  </symbol>
+
+  <!-- Bottom-Left -->
+  <symbol id="bottom-left" viewBox="0 0 9 9" width="9" height="9">
+    <rect x="0" y="6" width="9" height="3" fill="#121213"/>
+    <rect x="0" y="3" width="6" height="3" fill="#121213"/>
+    <rect x="0" y="0" width="3" height="3" fill="#121213"/>
+    <rect x="3" y="3" width="3" height="3" fill="#A1A1AA"/>
+    <rect x="3" y="0" width="6" height="3" fill="#A1A1AA"/>
+  </symbol>
+
+  <!-- Bottom-Right -->
+  <symbol id="bottom-right" viewBox="0 0 9 9" width="9" height="9">
+    <rect x="0" y="6" width="9" height="3" fill="#121213"/>
+    <rect x="3" y="3" width="6" height="3" fill="#121213"/>
+    <rect x="6" y="0" width="3" height="3" fill="#121213"/>
+    <rect x="0" y="0" width="6" height="3" fill="#A1A1AA"/>
+    <rect x="0" y="3" width="3" height="3" fill="#A1A1AA"/>
+  </symbol>
+
+  <!-- Top-Center -->
+  <symbol id="top-center" viewBox="0 0 9 9" width="9" height="9">
+    <rect x="0" y="0" width="9" height="3" fill="#A1A1AA"/>
+    <rect x="0" y="3" width="9" height="6" fill="#121213"/>
+  </symbol>
+
+  <!-- Bottom-Center -->
+  <symbol id="bottom-center" viewBox="0 0 9 9" width="9" height="9">
+    <rect x="0" y="6" width="9" height="3" fill="#A1A1AA"/>
+    <rect x="0" y="0" width="9" height="6" fill="#121213"/>
+  </symbol>
+
+  <!-- Middle-Left -->
+  <symbol id="middle-left" viewBox="0 0 9 9" width="9" height="9">
+    <rect x="0" y="0" width="3" height="9" fill="#A1A1AA"/>
+    <rect x="3" y="0" width="6" height="9" fill="#121213"/>
+  </symbol>
+
+  <!-- Middle-Right -->
+  <symbol id="middle-right" viewBox="0 0 9 9" width="9" height="9">
+    <rect x="6" y="0" width="3" height="9" fill="#A1A1AA"/>
+    <rect x="0" y="0" width="6" height="9" fill="#121213"/>
+  </symbol>
+</svg>

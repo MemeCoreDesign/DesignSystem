@@ -156,4 +156,51 @@
   --shadow-ecosystem-glow: 0 0 200px 0 rgba(25,255,155,0.60);
   --shadow-ecosystem-glow2: 0 0 200px 0 rgba(223,255,250,0.60);
 
+  /* --------------------------------------------------------
+     COLORS — Gray Scale
+  -------------------------------------------------------- */
+  --color-gray-200: #e7e7eb;
+  --color-gray-300: #dadae0;
+  --color-gray-400: #ceced6;
+  --color-gray-500: #c2c2cc;
+  --color-gray-600: #a1a1aa;
+  --color-gray-700: #808088;   /* base/gray/700 */
+
+  /* --------------------------------------------------------
+     COLORS — Semantic
+  -------------------------------------------------------- */
+  --color-text-disabled:    #808088;   /* semantic/text/disabled — for dark bg buttons */
+  --color-text-disabled-lt: #a1a1aa;   /* semantic/text/disabled — for light bg (tertiary) */
+
+  /* --------------------------------------------------------
+     COLORS — Neutrals (Cards / UI 공통)
+  -------------------------------------------------------- */
+  --color-neutral-800: #3D3D43;
+  --color-neutral-750: #5E5E65;
+  --color-border-dark: #1C1C21;
+  --color-neutral-50:  #F9F9FA;
+
+  /* --------------------------------------------------------
+     COLORS — Tag
+  -------------------------------------------------------- */
+  --color-tag-yellow-bg:   #FFFBCE;
+  --color-tag-yellow-text: #B07F00;
+
+  /* --------------------------------------------------------
+     COLORS — Navigation
+  -------------------------------------------------------- */
+  --color-bg-gnb-light:     #f2ede4;  /* GNB light mode bg (warm cream) */
+  --color-bg-dropdown-dark: #1e1e28;  /* dark mode dropdown bg */
+  --color-primary-mid:      #c7b4f2;  /* mid-purple: dark nav active, secondary shadow */
+  --color-secondary-bg:     #f1ecfc;  /* very light purple: secondary btn bg, pagination hover */
+
+  /* --------------------------------------------------------
+     COLORS — Footer
+  -------------------------------------------------------- */
+  --color-bg-footer:          #121213;  /* = --color-black */
+  --color-text-footer:        #dadae0;  /* = --color-gray-300 */
+  --color-text-footer-muted:  #5e5e65;  /* = --color-neutral-750 */
+  --color-bg-social-icon:     #1c1c21;  /* = --color-border-dark */
+  --color-bg-social-hover:    #2e2e38;  /* social icon hover */
+
 }

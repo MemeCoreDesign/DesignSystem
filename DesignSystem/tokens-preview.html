@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MemeCore — Design Tokens</title>
+  <link rel="stylesheet" href="tokens.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--color-bg-night); color: var(--color-white); font-family: var(--font-body); padding: 48px 40px; }
+    h1 { font-family: var(--font-display); font-size: 28px; margin-bottom: 6px; }
+    .subtitle { color: rgba(255,255,255,0.45); font-size: 13px; margin-bottom: 48px; }
+    .section { margin-bottom: 56px; }
+    .section-title { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-light); margin-bottom: 20px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+
+    /* Color grid */
+    .color-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+    .color-chip { display: flex; flex-direction: column; gap: 6px; width: 120px; }
+    .color-swatch { height: 56px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); }
+    .color-name { font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1.4; }
+    .color-value { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.9); font-family: 'IBM Plex Mono', monospace; }
+
+    /* Typography specimens */
+    .type-row { display: flex; align-items: baseline; gap: 24px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .type-label { font-size: 11px; color: rgba(255,255,255,0.35); width: 180px; flex-shrink: 0; }
+    .type-spec { font-size: 10px; color: rgba(255,255,255,0.25); width: 140px; flex-shrink: 0; }
+
+    /* Shadow samples */
+    .shadow-grid { display: flex; flex-wrap: wrap; gap: 24px; }
+    .shadow-chip { background: var(--color-white); border-radius: 12px; padding: 20px 24px; color: var(--color-black); font-size: 12px; font-weight: 600; min-width: 180px; }
+
+    /* Spacing strip */
+    .space-row { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+    .space-bar { background: var(--color-primary-light); border-radius: 2px; height: 8px; }
+    .space-label { font-size: 11px; color: rgba(255,255,255,0.45); }
+  </style>
+</head>
+<body>
+
+  <h1>Design Tokens</h1>
+  <p class="subtitle">tokens.css — CSS Custom Properties · Source: Figma [Main Site] Design System V3</p>
+
+  <!-- COLORS: Brand -->
+  <div class="section">
+    <div class="section-title">Colors — Brand Primary</div>
+    <div class="color-grid">
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-primary)"></div>
+        <div class="color-name">--color-primary</div>
+        <div class="color-value">#7443df</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-primary-dark)"></div>
+        <div class="color-name">--color-primary-dark</div>
+        <div class="color-value">#2e1b59</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-primary-light)"></div>
+        <div class="color-name">--color-primary-light</div>
+        <div class="color-value">#9069e5</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-primary-mid)"></div>
+        <div class="color-name">--color-primary-mid</div>
+        <div class="color-value">#c7b4f2</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-secondary-bg)"></div>
+        <div class="color-name">--color-secondary-bg</div>
+        <div class="color-value">#f1ecfc</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLORS: Backgrounds -->
+  <div class="section">
+    <div class="section-title">Colors — Backgrounds</div>
+    <div class="color-grid">
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-bg-night)"></div>
+        <div class="color-name">--color-bg-night</div>
+        <div class="color-value">#172c4a</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-bg-night-dark)"></div>
+        <div class="color-name">--color-bg-night-dark</div>
+        <div class="color-value">#182133</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-bg-night-mid)"></div>
+        <div class="color-name">--color-bg-night-mid</div>
+        <div class="color-value">#202f4e</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-bg-gnb-light)"></div>
+        <div class="color-name">--color-bg-gnb-light</div>
+        <div class="color-value">#f2ede4</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-bg-grants)"></div>
+        <div class="color-name">--color-bg-grants</div>
+        <div class="color-value">#0c041e</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-bg-dropdown-dark)"></div>
+        <div class="color-name">--color-bg-dropdown-dark</div>
+        <div class="color-value">#1e1e28</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-bg-footer)"></div>
+        <div class="color-name">--color-bg-footer</div>
+        <div class="color-value">#121213</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-bg-sky)"></div>
+        <div class="color-name">--color-bg-sky</div>
+        <div class="color-value">#60abff</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLORS: Accent -->
+  <div class="section">
+    <div class="section-title">Colors — Accent</div>
+    <div class="color-grid">
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-accent-green)"></div>
+        <div class="color-name">--color-accent-green</div>
+        <div class="color-value">#19ff9b</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-accent-white)"></div>
+        <div class="color-name">--color-accent-white</div>
+        <div class="color-value">#dffffa</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-white); border:1px solid rgba(255,255,255,0.15)"></div>
+        <div class="color-name">--color-white</div>
+        <div class="color-value">#ffffff</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-black)"></div>
+        <div class="color-name">--color-black</div>
+        <div class="color-value">#121213</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLORS: Gray Scale -->
+  <div class="section">
+    <div class="section-title">Colors — Gray Scale</div>
+    <div class="color-grid">
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-gray-200)"></div>
+        <div class="color-name">--color-gray-200</div>
+        <div class="color-value">#e7e7eb</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-gray-300)"></div>
+        <div class="color-name">--color-gray-300</div>
+        <div class="color-value">#dadae0</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-gray-400)"></div>
+        <div class="color-name">--color-gray-400</div>
+        <div class="color-value">#ceced6</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-gray-500)"></div>
+        <div class="color-name">--color-gray-500</div>
+        <div class="color-value">#c2c2cc</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-gray-600)"></div>
+        <div class="color-name">--color-gray-600</div>
+        <div class="color-value">#a1a1aa</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-gray-700)"></div>
+        <div class="color-name">--color-gray-700</div>
+        <div class="color-value">#808088</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-neutral-800)"></div>
+        <div class="color-name">--color-neutral-800</div>
+        <div class="color-value">#3D3D43</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-neutral-750)"></div>
+        <div class="color-name">--color-neutral-750</div>
+        <div class="color-value">#5E5E65</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-border-dark)"></div>
+        <div class="color-name">--color-border-dark</div>
+        <div class="color-value">#1C1C21</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-neutral-50); border:1px solid rgba(255,255,255,0.12)"></div>
+        <div class="color-name">--color-neutral-50</div>
+        <div class="color-value">#F9F9FA</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLORS: Semantic -->
+  <div class="section">
+    <div class="section-title">Colors — Semantic / Tag</div>
+    <div class="color-grid">
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-text-disabled)"></div>
+        <div class="color-name">--color-text-disabled</div>
+        <div class="color-value">#808088</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-text-disabled-lt)"></div>
+        <div class="color-name">--color-text-disabled-lt</div>
+        <div class="color-value">#a1a1aa</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-tag-yellow-bg)"></div>
+        <div class="color-name">--color-tag-yellow-bg</div>
+        <div class="color-value">#FFFBCE</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-tag-yellow-text)"></div>
+        <div class="color-name">--color-tag-yellow-text</div>
+        <div class="color-value">#B07F00</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-bg-social-icon)"></div>
+        <div class="color-name">--color-bg-social-icon</div>
+        <div class="color-value">#1c1c21</div>
+      </div>
+      <div class="color-chip">
+        <div class="color-swatch" style="background:var(--color-bg-social-hover)"></div>
+        <div class="color-name">--color-bg-social-hover</div>
+        <div class="color-value">#2e2e38</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHADOWS -->
+  <div class="section">
+    <div class="section-title">Shadows</div>
+    <div class="shadow-grid">
+      <div class="shadow-chip" style="box-shadow:var(--shadow-btn-primary)">shadow-btn-primary</div>
+      <div class="shadow-chip" style="box-shadow:var(--shadow-btn-secondary)">shadow-btn-secondary</div>
+      <div class="shadow-chip" style="box-shadow:var(--shadow-btn-tertiary)">shadow-btn-tertiary</div>
+      <div class="shadow-chip" style="box-shadow:var(--shadow-btn-disabled); color:#a1a1aa">shadow-btn-disabled</div>
+      <div class="shadow-chip" style="box-shadow:var(--shadow-dropdown)">shadow-dropdown</div>
+      <div class="shadow-chip" style="box-shadow:var(--shadow-ticket)">shadow-ticket</div>
+      <div class="shadow-chip" style="box-shadow:var(--shadow-sticker)">shadow-sticker</div>
+    </div>
+  </div>
+
+  <!-- TYPOGRAPHY: Marvin Display -->
+  <div class="section">
+    <div class="section-title">Typography — title/bold (Marvin)</div>
+    <div class="type-row">
+      <div class="type-label">title/bold-xxxl</div>
+      <div class="type-spec">54px / 67px</div>
+      <div style="font-family:var(--font-display);font-size:var(--text-title-bold-xxxl);line-height:var(--lh-title-bold-xxxl)">MEMECORE</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">title/bold-xxl</div>
+      <div class="type-spec">48px / 58px</div>
+      <div style="font-family:var(--font-display);font-size:var(--text-title-bold-xxl);line-height:var(--lh-title-bold-xxl)">MEMECORE</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">title/bold-xl</div>
+      <div class="type-spec">40px / 48px</div>
+      <div style="font-family:var(--font-display);font-size:var(--text-title-bold-xl);line-height:var(--lh-title-bold-xl)">MEMECORE</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">title/bold-m</div>
+      <div class="type-spec">32px / 38.4px</div>
+      <div style="font-family:var(--font-display);font-size:var(--text-title-bold-m);line-height:var(--lh-title-bold-m)">MEMECORE</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">title/bold-s</div>
+      <div class="type-spec">24px / 28.8px</div>
+      <div style="font-family:var(--font-display);font-size:var(--text-title-bold-s);line-height:var(--lh-title-bold-s)">MEMECORE</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">title/bold-lg</div>
+      <div class="type-spec">20px / 24px</div>
+      <div style="font-family:var(--font-display);font-size:var(--text-title-bold-lg);line-height:var(--lh-title-bold-lg)">MEMECORE</div>
+    </div>
+  </div>
+
+  <!-- TYPOGRAPHY: IBM Plex Sans Body -->
+  <div class="section">
+    <div class="section-title">Typography — body/regular (IBM Plex Sans 400)</div>
+    <div class="type-row">
+      <div class="type-label">body-xxxl</div>
+      <div class="type-spec">28px / 42px</div>
+      <div style="font-size:var(--text-body-xxxl);line-height:var(--lh-body-xxxl)">The quick brown fox</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">body-xxl</div>
+      <div class="type-spec">24px / 36px</div>
+      <div style="font-size:var(--text-body-xxl);line-height:var(--lh-body-xxl)">The quick brown fox</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">body-xl</div>
+      <div class="type-spec">20px / 30px</div>
+      <div style="font-size:var(--text-body-xl);line-height:var(--lh-body-xl)">The quick brown fox</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">body-lg</div>
+      <div class="type-spec">18px / 27px</div>
+      <div style="font-size:var(--text-body-lg);line-height:var(--lh-body-lg)">The quick brown fox</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">body-md</div>
+      <div class="type-spec">16px / 24px</div>
+      <div style="font-size:var(--text-body-md);line-height:var(--lh-body-md)">The quick brown fox</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">body-sm</div>
+      <div class="type-spec">14px / 21px</div>
+      <div style="font-size:var(--text-body-sm);line-height:var(--lh-body-sm)">The quick brown fox</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">body-xs</div>
+      <div class="type-spec">13px / 19.5px</div>
+      <div style="font-size:var(--text-body-xs);line-height:var(--lh-body-xs)">The quick brown fox</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">body-xxs</div>
+      <div class="type-spec">12px / 18px</div>
+      <div style="font-size:var(--text-body-xxs);line-height:var(--lh-body-xxs)">The quick brown fox</div>
+    </div>
+  </div>
+
+  <!-- TYPOGRAPHY: Labels -->
+  <div class="section">
+    <div class="section-title">Typography — Labels &amp; Tags</div>
+    <div class="type-row">
+      <div class="type-label">label/btn-lg</div>
+      <div class="type-spec">16px / ls:0.24px</div>
+      <div style="font-family:var(--font-display);font-size:var(--text-label-btn-lg);letter-spacing:var(--ls-label-btn-lg)">GET STARTED</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">label/btn-md</div>
+      <div class="type-spec">14px / ls:0.21px</div>
+      <div style="font-family:var(--font-display);font-size:var(--text-label-btn-md);letter-spacing:var(--ls-label-btn-md)">GET STARTED</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">label/btn-sm</div>
+      <div class="type-spec">13px / ls:0.195px</div>
+      <div style="font-family:var(--font-display);font-size:var(--text-label-btn-sm);letter-spacing:var(--ls-label-btn-sm)">GET STARTED</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">label/tag</div>
+      <div class="type-spec">12px / ls:0.12px</div>
+      <div style="font-size:var(--text-label-tag);letter-spacing:var(--ls-label-tag)">Tag Label</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">label/footer-lg</div>
+      <div class="type-spec">18px</div>
+      <div style="font-size:var(--text-label-footer-lg)">Footer Link</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">label/footer-md</div>
+      <div class="type-spec">16px</div>
+      <div style="font-size:var(--text-label-footer-md)">Footer Link</div>
+    </div>
+    <div class="type-row">
+      <div class="type-label">label/footer-sm</div>
+      <div class="type-spec">14px</div>
+      <div style="font-size:var(--text-label-footer-sm)">Footer Link</div>
+    </div>
+  </div>
+
+</body>
+</html>
